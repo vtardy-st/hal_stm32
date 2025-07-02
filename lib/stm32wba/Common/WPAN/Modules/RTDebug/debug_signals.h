@@ -811,8 +811,6 @@ typedef enum {
   RT_DEBUG_LLHWC_GET_CH_IDX_ALGO_2,
 #endif /* USE_RT_DEBUG_LLHWC_GET_CH_IDX_ALGO_2 */
 
-#include "app_debug_signal_def.h"
-
   RT_DEBUG_SIGNALS_TOTAL_NUM
 } rt_debug_signal_t;
 

@@ -362,8 +362,9 @@ typedef enum
 /******************************************************************************
  * RealTime GPIO debug module configuration
  ******************************************************************************/
-
+#ifndef CFG_RT_DEBUG_GPIO_MODULE
 #define CFG_RT_DEBUG_GPIO_MODULE            (0)
+#endif
 #define CFG_RT_DEBUG_DTB                    (0)
 
 /******************************************************************************
