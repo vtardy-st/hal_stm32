@@ -496,7 +496,9 @@ void LINKLAYER_PLAT_RCOStopClbr(void)
   */
 void LINKLAYER_PLAT_RequestTemperature(void)
 {
-
+#if (USE_TEMPERATURE_BASED_RADIO_CALIBRATION == 1)
+  ll_sys_bg_temperature_measurement();
+#endif /* USE_TEMPERATURE_BASED_RADIO_CALIBRATION */
 }
 
 /**

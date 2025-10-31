@@ -74,11 +74,6 @@ if(CONFIG_BT_STM32WBA)
     )
   endif()
 
-  # Setting the right Cube define according to the Zephyr configuration
-  if(NOT CONFIG_BT_STM32WBA_USE_TEMP_BASED_CALIB)
-    zephyr_compile_definitions( -DUSE_TEMPERATURE_BASED_RADIO_CALIBRATION=0 )
-  endif()
-
   # Using the selected version of ble lib
   set_target_properties(stm32wba_ble_lib PROPERTIES INTERFACE_INCLUDE_DIRECTORIES ${STM32WBA_BLE_LIB_INCLUDE_DIR})
 
@@ -123,6 +118,11 @@ elseif(CONFIG_IEEE802154_STM32WBA)
 endif()
 
 if(CONFIG_BT_STM32WBA OR CONFIG_IEEE802154_STM32WBA)
+  # Setting the right Cube define according to the Zephyr configuration
+  if(NOT CONFIG_USE_TEMP_BASED_RADIO_CALIB)
+    zephyr_compile_definitions( -DUSE_TEMPERATURE_BASED_RADIO_CALIBRATION=0 )
+  endif()
+
   add_library(stm32wba_ll_lib STATIC IMPORTED GLOBAL)
   set(STM32WBA_LL_LIB_INCLUDE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/STM32_WPAN/link_layer/ll_cmd_lib)
   set_target_properties(stm32wba_ll_lib PROPERTIES IMPORTED_LOCATION ${STM32WBA_LIB_DIR}/${LL_LIB})

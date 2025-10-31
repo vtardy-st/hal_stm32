@@ -58,6 +58,9 @@
 /* USER CODE END GV */
 
 /* Private functions prototypes-----------------------------------------------*/
+#if (USE_TEMPERATURE_BASED_RADIO_CALIBRATION == 1)
+void ll_sys_bg_temperature_measurement_init(void);
+#endif /* USE_TEMPERATURE_BASED_RADIO_CALIBRATION */
 static void ll_sys_sleep_clock_source_selection(void);
 
 /* USER CODE BEGIN PFP */
