@@ -133,19 +133,28 @@ License Link:
 Patch List:
   * Discard "static" implementation of ll_sys_bg_temperature_measurement_init to allow specific zephyr implementation.
 
-    Impacted files:
+      Impacted files:
          * ll_sys_if.c
          * ll_sys.h
 
-  * Enabled extended advertising in CFG_BLE_OPTIONS:
+  * Enabled extended advertising in CFG_BLE_OPTIONS.
 
-    Impacted file: app_conf.h
+    Impacted file:
+         * app_conf.h
 
-  * Allowing Temperature based radio calibration configuration to be externally overwritten. Impacted file: app_conf.h
+  * Allowing Temperature based radio calibration configuration to be externally overwritten.
 
-  * Increased 2.4GHz RADIO low ISR priority. Impacted file: app_conf.h
+      Impacted file:
+         * app_conf.h
 
-  * Minimize dependency list. Impacted files:
+  * Increased 2.4GHz RADIO low ISR priority.
+
+      Impacted file:
+         * app_conf.h
+
+  * Minimize dependency list.
+
+      Impacted files:
          * stm_list.h
          * main.h
          * app_conf.h
@@ -153,17 +162,27 @@ Patch List:
          * ll_sys_if.c
          * linklayer_plat.c
 
-  * #ifndef __ZEPHYR__ applied to remove Cube specific implementation. Impacted files:
+  * #ifndef __ZEPHYR__ applied to remove Cube specific implementation.
+
+      Impacted files:
          * ll_sys_if.c
          * linklayer_plat.c
 
-  * LL sleep timer clock source set to LSE by default. Impacted files:
+  * LL sleep timer clock source set to LSE by default.
+
+      Impacted files:
          * ll_sys_if.c
          * linklayer_plat.c
 
-  * LL power table set not apllied. Impacted file: ll_sys_if.c
+  * LL power table set not apllied.
 
-  * SCM_HSE_WaitUntilReady Cube mechanism not used. Impacted file: linklayer_plat.c
+      Impacted file:
+         * ll_sys_if.c
+
+  * SCM_HSE_WaitUntilReady Cube mechanism not used.
+
+      Impacted file:
+         * linklayer_plat.c
 
   * Changes from official delivery:
          * dos2unix applied
@@ -181,7 +200,9 @@ Patch List:
          * ll_sys_if.c in RF_Integration subfolder in hal/stm32/lib/stm32wba
          * ll_sys_if_adapt.c in zephyr/soc/st/stm32/stm32wbax/hci_if
 
-  * Added #ifdef __ZEPHYR__. Impacted files:
+  * Added #ifdef __ZEPHYR__.
+
+      Impacted files:
          * app_conf.h
          * ll_sys_if.h
          * linklayer_plat.h
