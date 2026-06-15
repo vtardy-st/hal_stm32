@@ -13,6 +13,7 @@ zephyr_include_directories(Utilities/trace/adv_trace)
 zephyr_include_directories(STM32_WPAN)
 
 zephyr_sources(Common/WPAN/Modules/RTDebug/RTDebug.c)
+zephyr_sources(Common/WPAN/Modules/RTDebug/RTDebug_dtb.c)
 zephyr_sources(Common/WPAN/Modules/Log/log_module.c)
 zephyr_sources(Common/WPAN/Interfaces/hw_pka.c)
 zephyr_sources(Common/WPAN/Interfaces/hw_pka_p256.c)
