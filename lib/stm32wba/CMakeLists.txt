@@ -30,6 +30,9 @@ zephyr_sources(Common/WPAN/Modules/BasicAES/baes_cmac.c)
 zephyr_sources(Common/WPAN/Modules/BasicAES/baes_ecb.c)
 zephyr_sources(Common/WPAN/Interfaces/hw_aes.c)
 
+if(CONFIG_STM32WBA_RT_DEBUG_IO_DTB)
+  zephyr_sources(RF_Integration/Core/stm32wbax_soc.c)
+endif()
 
 set(STM32WBA_LIB_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../../zephyr/blobs/stm32wba/lib)
 
