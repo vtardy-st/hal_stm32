@@ -37,7 +37,7 @@
  *********************************************************************************************/
 
 #include "ral.h"
-
+#include "st_radio.h"
 /*=========================================== MACROS ======================================*/
 #define aMaxSIFSFrameSize           18      ///< Maximum SIFS frame size in bytes
 #define macMinSIFSPeriod            192     ///< Minimum SIFS period in microseconds
@@ -200,7 +200,7 @@ uint8_t dtmCheckRxState(void);
  * @param[in] aFrame : Pointer to MAC transmitted/received frame.
  * @param[in] aError : Status error of overall transmission (success, No_ack, and other errors).
  */
-void dtmRadioDone(otRadioFrame *aFrame, otError aError);
+void dtmRadioDone(StRadioFrame_t *aFrame, StRadioError aError);
 
 /**
  * @brief  Check if in Z_DTM_CHECK_TX_ERROR transmission mode or not.
@@ -213,7 +213,7 @@ uint8_t dtmCheckTxErrorState(void);
  *
  * @param[in] tx_error : Type of error to be counted for this trial.
  */
-void dtmCheckTxErrorCount(otError tx_error);
+void dtmCheckTxErrorCount(uint8_t tx_error);
 /**
  * @brief  Gives stored errors and their count that happen in single TX in Z_DTM_CHECK_TX_ERROR transmission mode.
  *
