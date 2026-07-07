@@ -39,6 +39,9 @@ Description:
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ral.h
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ll_intf_cmn.h
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/rfd_dev_config.h
+      - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/st_802154_ral.h
+      - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/st_802154_ral_callbacks.h
+      - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/st_radio.h
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ot_inc/crypto.h
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ot_inc/error.h
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ot_inc/instance.h
@@ -186,7 +189,3 @@ Patch List:
          * ll_sys_if.h
          * linklayer_plat.h
          * ll_sys_startup.c
-
-  * IEEE 802.15.4 feature support in Zephyr architecture requires :
-         * specific libraries accessible in https://github.com/stm32-hotspot/STM32WBA-Zephyr-custom-binaries
-         * additionnal files "stm32wba_802154.h" and "stm32wba_802154_callbacks.h" in hal/stm32/lib/stm32wba/STM32WPAN/ieee802154 folder
