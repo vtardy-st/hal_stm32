@@ -39,6 +39,9 @@ Description:
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ral.h
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ll_intf_cmn.h
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/rfd_dev_config.h
+      - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/st_802154_ral.h
+      - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/st_802154_ral_callbacks.h
+      - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/st_radio.h
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ot_inc/crypto.h
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ot_inc/error.h
       - Middlewares/ST/STM32_WPAN/link_layer/ll_cmd_lib/inc/ot_inc/instance.h
